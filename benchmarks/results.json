@@ -1,0 +1,139 @@
+{
+  "config": {
+    "base_seed": 20260101,
+    "bootstrap_resamples": 5000,
+    "n_graphs": 400,
+    "permutations": 20000,
+    "strategies": [
+      "wal-fsync",
+      "wal-group4",
+      "wal-group8",
+      "rerun"
+    ]
+  },
+  "dataset": {
+    "checksum": "4cde6d32ca24ca05be4139a431b7f0d55d9a32789a7cccd5e3fb86d7d7f81e1a",
+    "n_graphs": 400
+  },
+  "notes": [
+    "Rates are fractions of real trials; no value is hand-set.",
+    "Bootstrap CIs collapse to a point for all-success/all-failure cells; the Wilson interval is reported alongside for those.",
+    "'extra_node_executions' is work redone beyond the uninterrupted run (a cost metric, not a correctness metric)."
+  ],
+  "replay_determinism": {
+    "graphs_with_external_read": 378,
+    "logged_replay": {
+      "bootstrap_ci": {
+        "high": 1.0,
+        "low": 1.0,
+        "point": 1.0
+      },
+      "n": 400,
+      "rate": 1.0,
+      "successes": 400,
+      "wilson_ci": {
+        "high": 0.9999999999999999,
+        "low": 0.9904877056657034,
+        "point": 1.0
+      }
+    },
+    "naive_replay": {
+      "bootstrap_ci": {
+        "high": 0.255,
+        "low": 0.1725,
+        "point": 0.215
+      },
+      "n": 400,
+      "rate": 0.215,
+      "successes": 86,
+      "wilson_ci": {
+        "high": 0.25787052353301015,
+        "low": 0.17755148423753886,
+        "point": 0.215
+      }
+    },
+    "permutation_logged_vs_naive": {
+      "observed_diff": 0.785,
+      "p_value": 4.999750012499375e-05,
+      "permutations": 20000.0,
+      "resolution": 4.999750012499375e-05
+    }
+  },
+  "resume_correctness": {
+    "headline": {
+      "comparison": "wal-fsync vs rerun",
+      "permutation": {
+        "observed_diff": 0.795,
+        "p_value": 4.999750012499375e-05,
+        "permutations": 20000.0,
+        "resolution": 4.999750012499375e-05
+      }
+    },
+    "per_strategy": {
+      "rerun": {
+        "bootstrap_ci": {
+          "high": 0.2425,
+          "low": 0.1675,
+          "point": 0.205
+        },
+        "mean_extra_node_executions": 5.91,
+        "n": 400,
+        "rate": 0.205,
+        "successes": 82,
+        "wilson_ci": {
+          "high": 0.24727941547942867,
+          "low": 0.16833283817780625,
+          "point": 0.205
+        }
+      },
+      "wal-fsync": {
+        "bootstrap_ci": {
+          "high": 1.0,
+          "low": 1.0,
+          "point": 1.0
+        },
+        "mean_extra_node_executions": 0.0,
+        "n": 400,
+        "rate": 1.0,
+        "successes": 400,
+        "wilson_ci": {
+          "high": 0.9999999999999999,
+          "low": 0.9904877056657034,
+          "point": 1.0
+        }
+      },
+      "wal-group4": {
+        "bootstrap_ci": {
+          "high": 0.6525,
+          "low": 0.5575,
+          "point": 0.605
+        },
+        "mean_extra_node_executions": 1.45,
+        "n": 400,
+        "rate": 0.605,
+        "successes": 242,
+        "wilson_ci": {
+          "high": 0.6516897624574263,
+          "low": 0.5563126557323714,
+          "point": 0.605
+        }
+      },
+      "wal-group8": {
+        "bootstrap_ci": {
+          "high": 0.3825,
+          "low": 0.2875,
+          "point": 0.335
+        },
+        "mean_extra_node_executions": 3.31,
+        "n": 400,
+        "rate": 0.335,
+        "successes": 134,
+        "wilson_ci": {
+          "high": 0.3826299756997641,
+          "low": 0.29050908143055376,
+          "point": 0.335
+        }
+      }
+    }
+  }
+}

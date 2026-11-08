@@ -1,0 +1,19 @@
+{
+  "config": {
+    "base_seed": 20260101,
+    "bootstrap_resamples": 5000,
+    "n_graphs": 400,
+    "permutations": 20000,
+    "strategies": [
+      "wal-fsync",
+      "wal-group4",
+      "wal-group8",
+      "rerun"
+    ]
+  },
+  "dataset_checksum": "4cde6d32ca24ca05be4139a431b7f0d55d9a32789a7cccd5e3fb86d7d7f81e1a",
+  "git_sha": "n/a",
+  "implementation": "CPython",
+  "platform": "Linux-6.18.44-fc-v242-x86_64-with-glibc2.39",
+  "python": "3.13.18"
+}
